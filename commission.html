@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OrderFlow order management prototype">
+  <title>My commission | OrderFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body data-role="employee">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="employee-dashboard.html"><span class="brand-mark">O</span><span>orderflow<span class="brand-dot">.</span></span></a>
+    <div class="workspace-switch"><span class="workspace-avatar">E</span><span><b>Employee workspace</b><small>Demo organization</small></span><span class="switch-chevron">⌄</span></div>
+    <p class="nav-caption">WORKSPACE</p>
+    <nav class="side-nav" aria-label="Main navigation"><a class="nav-link" href="employee-dashboard.html"><span class="nav-icon">▦</span><span>Dashboard</span></a>
+<a class="nav-link" href="new-order.html"><span class="nav-icon">＋</span><span>New order</span></a>
+<a class="nav-link" href="my-orders.html"><span class="nav-icon">▤</span><span>My orders</span></a>
+<a class="nav-link active" href="commission.html"><span class="nav-icon">◉</span><span>Commission</span></a>
+</nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><span class="help-icon">?</span><b>Need a hand?</b><p>Explore the prototype and sample workflow.</p><a href="README.md">Project guide ↗</a></div>
+      <a class="nav-link logout-link" href="index.html"><span class="nav-icon">↪</span><span>Sign out</span></a>
+      <div class="user-mini"><div class="avatar">SH</div><span><b>Saad Hussain</b><small>Sales employee</small></span><span class="user-more">•••</span></div>
+    </div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <div class="breadcrumb"><span>Workspace</span><span>/</span><b>My commission</b></div>
+      <div class="topbar-actions"><label class="global-search"><span>⌕</span><input type="search" placeholder="Search anything..." data-global-search><kbd>⌘ K</kbd></label><button class="icon-button notification-button" aria-label="Notifications" data-toast="You're all caught up.">♧<i></i></button><div class="top-user"><div class="avatar">SH</div><span>Saad</span><span>⌄</span></div></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading"><div><div class="eyebrow">EMPLOYEE PORTAL</div><h1>My commission</h1><p>A transparent sample view of your monthly earnings.</p></div><div class="heading-actions"><a class="btn btn-primary" href="new-order.html">＋ Create new order</a></div></div>
+      
+<div class="commission-hero"><div><span class="banner-tag">OCTOBER 2026 · SAMPLE SUMMARY</span><h2>Your work is adding up.</h2><p>Track estimated commission earnings and approved order value.</p></div><div class="commission-amount"><small>Estimated monthly commission</small><b>Rs24,850</b><span>↗ 6.2% compared with September</span></div></div>
+<div class="stats-grid"><article class="stat-card"><div class="stat-top"><span>Approved order value</span><span class="stat-icon violet">Rs</span></div><div class="stat-value">Rs4.97L</div><div class="stat-foot"><span>96 approved orders</span></div></article><article class="stat-card"><div class="stat-top"><span>Commission rate</span><span class="stat-icon blue">％</span></div><div class="stat-value">5.0%</div><div class="stat-foot"><span>Illustrative sample rate</span></div></article><article class="stat-card"><div class="stat-top"><span>Paid this month</span><span class="stat-icon green">✓</span></div><div class="stat-value">Rs18,000</div><div class="stat-foot"><span class="trend up">72% of estimate</span></div></article><article class="stat-card"><div class="stat-top"><span>Remaining estimate</span><span class="stat-icon amber">◷</span></div><div class="stat-value">Rs6,850</div><div class="stat-foot"><span>Subject to admin review</span></div></article></div>
+<div class="content-grid content-grid-main"><section class="panel panel-large"><div class="panel-header"><div><h3>Commission trend</h3><p>Monthly estimated earnings (PKR)</p></div><span class="pill-soft">Apr – Oct 2026</span></div><div class="commission-chart"><div class="commission-bars"><div><i style="height:38%"></i><span>Apr</span></div><div><i style="height:48%"></i><span>May</span></div><div><i style="height:43%"></i><span>Jun</span></div><div><i style="height:65%"></i><span>Jul</span></div><div><i style="height:58%"></i><span>Aug</span></div><div><i style="height:80%"></i><span>Sep</span></div><div><i style="height:95%"></i><span>Oct</span></div></div></div></section><section class="panel payout-panel"><div class="panel-header"><div><h3>Next payout</h3><p>Estimated schedule</p></div><span class="stat-icon green">↗</span></div><div class="payout-date"><b>30</b><span>OCT<br>2026</span></div><p class="muted">Final amounts are subject to admin approval. This is not a payment promise.</p><span class="status-pill pending">Awaiting review</span></section></div>
+<section class="panel table-panel"><div class="panel-header"><div><h3>Commission breakdown</h3><p>Sample monthly records by order</p></div><button class="btn btn-secondary btn-small" data-print>Print summary ↗</button></div><div class="table-wrap"><table><thead><tr><th>Order ID</th><th>Order date</th><th>Approved value</th><th>Rate</th><th>Commission</th><th>Payment status</th></tr></thead><tbody><tr><td><b>#OF-2047</b></td><td>18 Oct 2026</td><td>Rs8,900</td><td>5%</td><td class="money">Rs445</td><td><span class="status-pill approved">Approved</span></td></tr><tr><td><b>#OF-2045</b></td><td>16 Oct 2026</td><td>Rs18,200</td><td>5%</td><td class="money">Rs910</td><td><span class="status-pill approved">Approved</span></td></tr><tr><td><b>#OF-2043</b></td><td>14 Oct 2026</td><td>Rs7,600</td><td>5%</td><td class="money">Rs380</td><td><span class="status-pill pending">Pending payout</span></td></tr></tbody></table></div></section>
+
+      <footer class="app-footer"><span>© 2026 OrderFlow · Front-end prototype</span><span>Built for Web Engineering · BSCS 5A</span></footer>
+    </section>
+  </main>
+</div>
+<div class="toast-region" id="toastRegion" aria-live="polite"></div>
+</body>
+</html>

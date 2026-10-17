@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OrderFlow order management prototype">
+  <title>Order approvals | OrderFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body data-role="admin">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="admin-dashboard.html"><span class="brand-mark">O</span><span>orderflow<span class="brand-dot">.</span></span></a>
+    <div class="workspace-switch"><span class="workspace-avatar">A</span><span><b>Admin workspace</b><small>Demo organization</small></span><span class="switch-chevron">⌄</span></div>
+    <p class="nav-caption">WORKSPACE</p>
+    <nav class="side-nav" aria-label="Main navigation"><a class="nav-link" href="admin-dashboard.html"><span class="nav-icon">▥</span><span>Admin overview</span></a>
+<a class="nav-link active" href="approvals.html"><span class="nav-icon">✓</span><span>Order approvals</span></a>
+<a class="nav-link" href="reports-dispatch.html"><span class="nav-icon">↗</span><span>Reports & dispatch</span></a>
+</nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><span class="help-icon">?</span><b>Need a hand?</b><p>Explore the prototype and sample workflow.</p><a href="README.md">Project guide ↗</a></div>
+      <a class="nav-link logout-link" href="index.html"><span class="nav-icon">↪</span><span>Sign out</span></a>
+      <div class="user-mini"><div class="avatar">SS</div><span><b>Sayyam Shahid</b><small>Administrator</small></span><span class="user-more">•••</span></div>
+    </div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <div class="breadcrumb"><span>Workspace</span><span>/</span><b>Order approvals</b></div>
+      <div class="topbar-actions"><label class="global-search"><span>⌕</span><input type="search" placeholder="Search anything..." data-global-search><kbd>⌘ K</kbd></label><button class="icon-button notification-button" aria-label="Notifications" data-toast="You're all caught up.">♧<i></i></button><div class="top-user"><div class="avatar">SS</div><span>Sayyam</span><span>⌄</span></div></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading"><div><div class="eyebrow">ADMINISTRATION</div><h1>Order approvals</h1><p>Review submitted orders and sample payment information.</p></div><div class="heading-actions"><a class="btn btn-secondary" href="reports-dispatch.html">View reports ↗</a></div></div>
+      
+<div class="approval-summary"><div><span class="stat-icon amber">◷</span><span><small>Waiting for review</small><b id="pendingCount">42 orders</b></span></div><div><span class="stat-icon green">✓</span><span><small>Approved this month</small><b>986 orders</b></span></div><div><span class="stat-icon coral">×</span><span><small>Rejected this month</small><b>106 orders</b></span></div><div class="approval-note"><span>ⓘ</span> Demo actions update this page only; no real payment is verified.</div></div>
+<section class="panel table-panel"><div class="panel-header orders-toolbar"><div><h3>Review submitted orders</h3><p>Check order details and payment information before deciding.</p></div><div class="table-tools"><label class="table-search">⌕ <input type="search" placeholder="Search customer or ID..." data-table-search="#approvalTable"></label><select class="compact-select" data-table-filter="#approvalTable"><option value="all">All statuses</option><option value="Pending">Pending</option><option value="Approved">Approved</option><option value="Rejected">Rejected</option></select></div></div><div class="table-wrap"><table id="approvalTable"><thead><tr><th>Order / Customer</th><th>Employee</th><th>Order amount</th><th>Payment details</th><th>Submitted</th><th>Status</th><th>Decision</th></tr></thead><tbody>
+<tr><td><div class="id-cell"><b>#OF-2048</b><small>Ali Murtaza · 0300 1234567</small></div></td><td>Saad Hussain</td><td class="money">Rs12,500</td><td><b>Partial · Rs5,000 received</b><small class="table-subtext">Receipt: receipt-2048.jpg</small><button class="inline-link" data-toast="Demo receipt preview: receipt-2048.jpg (no real file attached).">View receipt ↗</button></td><td>19 Oct 2026</td><td><span class="status-pill pending">Pending</span></td><td><div class="decision-actions"><button class="decision-btn approve" data-decision="Approved">✓</button><button class="decision-btn reject" data-decision="Rejected">×</button></div></td></tr>
+<tr><td><div class="id-cell"><b>#OF-2044</b><small>Usman Tariq · 0311 1234567</small></div></td><td>Saad Hussain</td><td class="money">Rs3,750</td><td><b>Cash on delivery</b><small class="table-subtext">Amount received: Rs0</small></td><td>15 Oct 2026</td><td><span class="status-pill pending">Pending</span></td><td><div class="decision-actions"><button class="decision-btn approve" data-decision="Approved">✓</button><button class="decision-btn reject" data-decision="Rejected">×</button></div></td></tr>
+<tr><td><div class="id-cell"><b>#OF-2042</b><small>Bilal Ahmed · 0321 5550199</small></div></td><td>Hira Malik</td><td class="money">Rs22,400</td><td><b>Full payment · Rs22,400</b><small class="table-subtext">Receipt: bill-2042.pdf</small><button class="inline-link" data-toast="Demo receipt preview: bill-2042.pdf (no real file attached).">View receipt ↗</button></td><td>14 Oct 2026</td><td><span class="status-pill pending">Pending</span></td><td><div class="decision-actions"><button class="decision-btn approve" data-decision="Approved">✓</button><button class="decision-btn reject" data-decision="Rejected">×</button></div></td></tr>
+<tr><td><div class="id-cell"><b>#OF-2041</b><small>Maria Shah · 0334 8850199</small></div></td><td>Hamza Rauf</td><td class="money">Rs6,200</td><td><b>Partial · Rs2,000 received</b><small class="table-subtext">Receipt: receipt-2041.png</small></td><td>13 Oct 2026</td><td><span class="status-pill approved">Approved</span></td><td><span class="decision-complete">Reviewed</span></td></tr>
+<tr><td><div class="id-cell"><b>#OF-2039</b><small>Bilal Khan · 0301 8831001</small></div></td><td>Hira Malik</td><td class="money">Rs4,100</td><td><b>Cash on delivery</b><small class="table-subtext">Amount received: Rs0</small></td><td>12 Oct 2026</td><td><span class="status-pill rejected">Rejected</span></td><td><span class="decision-complete">Reviewed</span></td></tr>
+</tbody></table><div class="empty-state" hidden>No orders match your search.</div></div><div class="table-footer"><span>Sample queue · actions are local only</span><button class="btn btn-secondary btn-small" data-toast="Export is reserved for a later project phase.">Export queue ↗</button></div></section>
+
+      <footer class="app-footer"><span>© 2026 OrderFlow · Front-end prototype</span><span>Built for Web Engineering · BSCS 5A</span></footer>
+    </section>
+  </main>
+</div>
+<div class="toast-region" id="toastRegion" aria-live="polite"></div>
+</body>
+</html>

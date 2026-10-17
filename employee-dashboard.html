@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OrderFlow order management prototype">
+  <title>Employee dashboard | OrderFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body data-role="employee">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="employee-dashboard.html"><span class="brand-mark">O</span><span>orderflow<span class="brand-dot">.</span></span></a>
+    <div class="workspace-switch"><span class="workspace-avatar">E</span><span><b>Employee workspace</b><small>Demo organization</small></span><span class="switch-chevron">⌄</span></div>
+    <p class="nav-caption">WORKSPACE</p>
+    <nav class="side-nav" aria-label="Main navigation"><a class="nav-link active" href="employee-dashboard.html"><span class="nav-icon">▦</span><span>Dashboard</span></a>
+<a class="nav-link" href="new-order.html"><span class="nav-icon">＋</span><span>New order</span></a>
+<a class="nav-link" href="my-orders.html"><span class="nav-icon">▤</span><span>My orders</span></a>
+<a class="nav-link" href="commission.html"><span class="nav-icon">◉</span><span>Commission</span></a>
+</nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><span class="help-icon">?</span><b>Need a hand?</b><p>Explore the prototype and sample workflow.</p><a href="README.md">Project guide ↗</a></div>
+      <a class="nav-link logout-link" href="index.html"><span class="nav-icon">↪</span><span>Sign out</span></a>
+      <div class="user-mini"><div class="avatar">SH</div><span><b>Saad Hussain</b><small>Sales employee</small></span><span class="user-more">•••</span></div>
+    </div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <div class="breadcrumb"><span>Workspace</span><span>/</span><b>Employee dashboard</b></div>
+      <div class="topbar-actions"><label class="global-search"><span>⌕</span><input type="search" placeholder="Search anything..." data-global-search><kbd>⌘ K</kbd></label><button class="icon-button notification-button" aria-label="Notifications" data-toast="You're all caught up.">♧<i></i></button><div class="top-user"><div class="avatar">SH</div><span>Saad</span><span>⌄</span></div></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading"><div><div class="eyebrow">EMPLOYEE PORTAL</div><h1>Employee dashboard</h1><p>Monitor your submitted orders, approval progress, and earnings.</p></div><div class="heading-actions"><a class="btn btn-primary" href="new-order.html">＋ Create new order</a></div></div>
+      
+<div class="welcome-banner"><div><span class="banner-tag">MONDAY, OCTOBER 19, 2026</span><h2>Good morning, Saad <span>✳</span></h2><p>Here’s what’s happening with your orders today.</p></div><div class="banner-art"><div class="art-ring ring-one"></div><div class="art-ring ring-two"></div><div class="art-box">↗</div></div></div>
+<div class="stats-grid">
+  <article class="stat-card"><div class="stat-top"><span>Total orders</span><span class="stat-icon violet">▤</span></div><div class="stat-value">128</div><div class="stat-foot"><span class="trend up">↗ 12.8%</span><span>vs last month</span></div><div class="sparkline spark-violet"><i style="height:35%"></i><i style="height:48%"></i><i style="height:42%"></i><i style="height:64%"></i><i style="height:55%"></i><i style="height:78%"></i><i style="height:100%"></i></div></article>
+  <article class="stat-card"><div class="stat-top"><span>Pending orders</span><span class="stat-icon amber">◷</span></div><div class="stat-value">18</div><div class="stat-foot"><span class="trend warning">Needs attention</span></div><div class="progress-track"><span style="width:34%;background:#e6a23c"></span></div><small class="stat-caption">34% of active orders</small></article>
+  <article class="stat-card"><div class="stat-top"><span>Approved orders</span><span class="stat-icon green">✓</span></div><div class="stat-value">96</div><div class="stat-foot"><span class="trend up">↗ 8.4%</span><span>vs last month</span></div><div class="progress-track"><span style="width:75%;background:#26a879"></span></div><small class="stat-caption">75% approval rate</small></article>
+  <article class="stat-card"><div class="stat-top"><span>Monthly commission</span><span class="stat-icon blue">Rs</span></div><div class="stat-value">Rs24,850</div><div class="stat-foot"><span class="trend up">↗ 6.2%</span><span>vs last month</span></div><div class="stat-caption">Estimated · sample data</div></article>
+</div>
+<div class="content-grid content-grid-main">
+  <section class="panel panel-large"><div class="panel-header"><div><h3>Order activity</h3><p>Order volume over the last 7 months</p></div><select class="compact-select" aria-label="Chart period" data-chart-period><option value="week">Last 7 months</option><option value="quarter">Last 4 months</option></select></div><div class="chart-legend"><span><i class="legend-dot violet-dot"></i>Orders submitted</span><span><i class="legend-dot mint-dot"></i>Orders approved</span></div><div class="bar-chart" role="img" aria-label="Bar chart of submitted and approved orders"><div class="chart-y-labels"><span>160</span><span>120</span><span>80</span><span>40</span><span>0</span></div><div class="chart-bars" data-chart-bars><div class="bar-group"><div class="bar-pair"><i style="height:40%"></i><i class="approved-bar" style="height:28%"></i></div><span>Apr</span></div><div class="bar-group"><div class="bar-pair"><i style="height:52%"></i><i class="approved-bar" style="height:42%"></i></div><span>May</span></div><div class="bar-group"><div class="bar-pair"><i style="height:46%"></i><i class="approved-bar" style="height:36%"></i></div><span>Jun</span></div><div class="bar-group"><div class="bar-pair"><i style="height:68%"></i><i class="approved-bar" style="height:54%"></i></div><span>Jul</span></div><div class="bar-group"><div class="bar-pair"><i style="height:62%"></i><i class="approved-bar" style="height:48%"></i></div><span>Aug</span></div><div class="bar-group"><div class="bar-pair"><i style="height:80%"></i><i class="approved-bar" style="height:64%"></i></div><span>Sep</span></div><div class="bar-group"><div class="bar-pair"><i style="height:94%"></i><i class="approved-bar" style="height:78%"></i></div><span>Oct</span></div></div></div></section>
+  <section class="panel"><div class="panel-header"><div><h3>Order status</h3><p>Current order distribution</p></div><button class="more-button" data-toast="Status summary uses sample data.">•••</button></div><div class="donut-wrap"><div class="donut-chart"><div><b>128</b><small>Total orders</small></div></div><div class="donut-center"></div></div><div class="status-legend"><div><span><i class="legend-dot mint-dot"></i>Approved</span><b>96 <small>75%</small></b></div><div><span><i class="legend-dot amber-dot"></i>Pending</span><b>18 <small>14%</small></b></div><div><span><i class="legend-dot coral-dot"></i>Rejected</span><b>14 <small>11%</small></b></div></div></section>
+</div>
+<section class="panel table-panel"><div class="panel-header"><div><h3>Recent orders</h3><p>Keep track of your latest submissions</p></div><a class="text-link" href="my-orders.html">View all orders →</a></div><div class="table-wrap"><table><thead><tr><th>Order ID</th><th>Customer</th><th>Date</th><th>Amount</th><th>Payment</th><th>Status</th><th></th></tr></thead><tbody class="order-table-body"><tr><td><b>#OF-2048</b></td><td><div class="customer-cell"><span class="customer-avatar ca-purple">AM</span><span><b>Ali Murtaza</b><small>0300 1234567</small></span></div></td><td>19 Oct 2026</td><td class="money">Rs12,500</td><td><span class="payment-pill paid">Partial</span></td><td><span class="status-pill pending">Pending</span></td><td><a class="row-link" href="my-orders.html" aria-label="View order">↗</a></td></tr><tr><td><b>#OF-2047</b></td><td><div class="customer-cell"><span class="customer-avatar ca-green">SK</span><span><b>Sana Khalid</b><small>0312 7654321</small></span></div></td><td>18 Oct 2026</td><td class="money">Rs8,900</td><td><span class="payment-pill paid">Full</span></td><td><span class="status-pill approved">Approved</span></td><td><a class="row-link" href="my-orders.html">↗</a></td></tr><tr><td><b>#OF-2046</b></td><td><div class="customer-cell"><span class="customer-avatar ca-blue">HR</span><span><b>Hamza Raza</b><small>0333 2468101</small></span></div></td><td>17 Oct 2026</td><td class="money">Rs5,400</td><td><span class="payment-pill cod">COD</span></td><td><span class="status-pill rejected">Rejected</span></td><td><a class="row-link" href="my-orders.html">↗</a></td></tr></tbody></table></div></section>
+
+      <footer class="app-footer"><span>© 2026 OrderFlow · Front-end prototype</span><span>Built for Web Engineering · BSCS 5A</span></footer>
+    </section>
+  </main>
+</div>
+<div class="toast-region" id="toastRegion" aria-live="polite"></div>
+</body>
+</html>
