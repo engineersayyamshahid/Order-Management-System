@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OrderFlow order management prototype">
+  <title>My orders | OrderFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body data-role="employee">
+<div class="app-layout">
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="employee-dashboard.html"><span class="brand-mark">O</span><span>orderflow<span class="brand-dot">.</span></span></a>
+    <div class="workspace-switch"><span class="workspace-avatar">E</span><span><b>Employee workspace</b><small>Demo organization</small></span><span class="switch-chevron">⌄</span></div>
+    <p class="nav-caption">WORKSPACE</p>
+    <nav class="side-nav" aria-label="Main navigation"><a class="nav-link" href="employee-dashboard.html"><span class="nav-icon">▦</span><span>Dashboard</span></a>
+<a class="nav-link" href="new-order.html"><span class="nav-icon">＋</span><span>New order</span></a>
+<a class="nav-link active" href="my-orders.html"><span class="nav-icon">▤</span><span>My orders</span></a>
+<a class="nav-link" href="commission.html"><span class="nav-icon">◉</span><span>Commission</span></a>
+</nav>
+    <div class="sidebar-bottom">
+      <div class="help-card"><span class="help-icon">?</span><b>Need a hand?</b><p>Explore the prototype and sample workflow.</p><a href="README.md">Project guide ↗</a></div>
+      <a class="nav-link logout-link" href="index.html"><span class="nav-icon">↪</span><span>Sign out</span></a>
+      <div class="user-mini"><div class="avatar">SH</div><span><b>Saad Hussain</b><small>Sales employee</small></span><span class="user-more">•••</span></div>
+    </div>
+  </aside>
+  <main class="main-area">
+    <header class="topbar">
+      <button class="mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <div class="breadcrumb"><span>Workspace</span><span>/</span><b>My orders</b></div>
+      <div class="topbar-actions"><label class="global-search"><span>⌕</span><input type="search" placeholder="Search anything..." data-global-search><kbd>⌘ K</kbd></label><button class="icon-button notification-button" aria-label="Notifications" data-toast="You're all caught up.">♧<i></i></button><div class="top-user"><div class="avatar">SH</div><span>Saad</span><span>⌄</span></div></div>
+    </header>
+    <section class="page-content">
+      <div class="page-heading"><div><div class="eyebrow">EMPLOYEE PORTAL</div><h1>My orders</h1><p>Everything you've submitted, with clear status and review notes.</p></div><div class="heading-actions"><a class="btn btn-primary" href="new-order.html">＋ Create new order</a></div></div>
+      
+<div class="stats-grid stats-grid-compact"><article class="mini-stat"><span class="mini-stat-icon violet">▤</span><div><small>Total submitted</small><b id="myOrdersTotal">128</b></div></article><article class="mini-stat"><span class="mini-stat-icon amber">◷</span><div><small>Awaiting review</small><b>18</b></div></article><article class="mini-stat"><span class="mini-stat-icon green">✓</span><div><small>Approved</small><b>96</b></div></article><article class="mini-stat"><span class="mini-stat-icon coral">×</span><div><small>Rejected</small><b>14</b></div></article></div>
+<section class="panel table-panel"><div class="panel-header orders-toolbar"><div><h3>All submitted orders</h3><p>Review the status of every order you've submitted.</p></div><div class="table-tools"><label class="table-search">⌕ <input type="search" placeholder="Search orders..." data-table-search="#myOrdersTable"></label><select class="compact-select" data-table-filter="#myOrdersTable"><option value="all">All statuses</option><option value="Pending">Pending</option><option value="Approved">Approved</option><option value="Rejected">Rejected</option></select></div></div><div class="table-wrap"><table id="myOrdersTable"><thead><tr><th>Order ID</th><th>Customer</th><th>Submitted</th><th>Order amount</th><th>Payment</th><th>Status</th><th>Note</th></tr></thead><tbody class="order-table-body">
+<tr><td><b>#OF-2048</b></td><td>Ali Murtaza</td><td>19 Oct 2026</td><td class="money">Rs12,500</td><td>Partial</td><td><span class="status-pill pending">Pending</span></td><td>Awaiting payment review</td></tr>
+<tr><td><b>#OF-2047</b></td><td>Sana Khalid</td><td>18 Oct 2026</td><td class="money">Rs8,900</td><td>Full</td><td><span class="status-pill approved">Approved</span></td><td>Ready for dispatch</td></tr>
+<tr><td><b>#OF-2046</b></td><td>Hamza Raza</td><td>17 Oct 2026</td><td class="money">Rs5,400</td><td>COD</td><td><span class="status-pill rejected">Rejected</span></td><td>Incomplete customer details</td></tr>
+<tr><td><b>#OF-2045</b></td><td>Ayesha Noor</td><td>16 Oct 2026</td><td class="money">Rs18,200</td><td>Full</td><td><span class="status-pill approved">Approved</span></td><td>Dispatch scheduled</td></tr>
+<tr><td><b>#OF-2044</b></td><td>Usman Tariq</td><td>15 Oct 2026</td><td class="money">Rs3,750</td><td>COD</td><td><span class="status-pill pending">Pending</span></td><td>Awaiting admin review</td></tr>
+<tr><td><b>#OF-2043</b></td><td>Maryam Ali</td><td>14 Oct 2026</td><td class="money">Rs7,600</td><td>Partial</td><td><span class="status-pill approved">Approved</span></td><td>Payment verified (sample)</td></tr>
+</tbody></table><div class="empty-state" hidden>No orders match your search.</div></div><div class="table-footer"><span>Showing sample order records</span><div><button class="pagination-btn" disabled>←</button><button class="pagination-btn current">1</button><button class="pagination-btn" data-toast="Only sample page 1 is available.">2</button><button class="pagination-btn" data-toast="Only sample page 1 is available.">→</button></div></div></section>
+
+      <footer class="app-footer"><span>© 2026 OrderFlow · Front-end prototype</span><span>Built for Web Engineering · BSCS 5A</span></footer>
+    </section>
+  </main>
+</div>
+<div class="toast-region" id="toastRegion" aria-live="polite"></div>
+</body>
+</html>

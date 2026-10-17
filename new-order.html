@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OrderFlow order management prototype">
+  <title>Create new order | OrderFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+
+<body data-role="employee">
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="employee-dashboard.html"><span class="brand-mark">O</span><span>orderflow<span
+            class="brand-dot">.</span></span></a>
+      <div class="workspace-switch"><span class="workspace-avatar">E</span><span><b>Employee workspace</b><small>Demo
+            organization</small></span><span class="switch-chevron">⌄</span></div>
+      <p class="nav-caption">WORKSPACE</p>
+      <nav class="side-nav" aria-label="Main navigation"><a class="nav-link" href="employee-dashboard.html"><span
+            class="nav-icon">▦</span><span>Dashboard</span></a>
+        <a class="nav-link active" href="new-order.html"><span class="nav-icon">＋</span><span>New order</span></a>
+        <a class="nav-link" href="my-orders.html"><span class="nav-icon">▤</span><span>My orders</span></a>
+        <a class="nav-link" href="commission.html"><span class="nav-icon">◉</span><span>Commission</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><span class="help-icon">?</span><b>Need a hand?</b>
+          <p>Explore the prototype and sample workflow.</p><a href="README.md">Project guide ↗</a>
+        </div>
+        <a class="nav-link logout-link" href="index.html"><span class="nav-icon">↪</span><span>Sign out</span></a>
+        <div class="user-mini">
+          <div class="avatar">SH</div><span><b>Saad Hussain</b><small>Sales employee</small></span><span
+            class="user-more">•••</span>
+        </div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumb"><span>Workspace</span><span>/</span><b>Create new order</b></div>
+        <div class="topbar-actions"><label class="global-search"><span>⌕</span><input type="search"
+              placeholder="Search anything..." data-global-search><kbd>⌘ K</kbd></label><button
+            class="icon-button notification-button" aria-label="Notifications"
+            data-toast="You're all caught up.">♧<i></i></button>
+          <div class="top-user">
+            <div class="avatar">SH</div><span>Saad</span><span>⌄</span>
+          </div>
+        </div>
+      </header>
+      <section class="page-content">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">EMPLOYEE PORTAL</div>
+            <h1>Create new order</h1>
+            <p>Capture customer, order, and payment details in one clear flow.</p>
+          </div>
+          <div class="heading-actions"><a class="btn btn-primary" href="new-order.html">＋ Create new order</a></div>
+        </div>
+
+        <div class="stepper">
+          <div class="step active"><span>01</span>
+            <div><b>Customer details</b><small>Who is placing the order?</small></div>
+          </div>
+          <div class="step active"><span>02</span>
+            <div><b>Order information</b><small>Items and amount</small></div>
+          </div>
+          <div class="step"><span>03</span>
+            <div><b>Payment details</b><small>Method and receipt</small></div>
+          </div>
+        </div>
+        <form id="newOrderForm" class="form-layout">
+          <div class="form-main">
+            <section class="panel form-panel">
+              <div class="form-section-title"><span class="section-number">01</span>
+                <div>
+                  <h3>Customer information</h3>
+                  <p>Enter the customer's contact and delivery details.</p>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field"><label for="customerName">Customer name <span>*</span></label><input
+                    id="customerName" name="customerName" type="text" placeholder="e.g. Ali Murtaza" required
+                    minlength="2"></div>
+                <div class="field"><label for="contactNumber">Contact number <span>*</span></label><input
+                    id="contactNumber" name="contactNumber" type="tel" placeholder="03XX XXXXXXX"
+                    pattern="[0-9+\-\s]{10,16}" required></div>
+                <div class="field"><label for="whatsappNumber">WhatsApp number</label><input id="whatsappNumber"
+                    name="whatsappNumber" type="tel" placeholder="03XX XXXXXXX"></div>
+                <div class="field field-full"><label for="customerAddress">Delivery address
+                    <span>*</span></label><textarea id="customerAddress" name="customerAddress" rows="3"
+                    placeholder="House, street, area, city..." required></textarea></div>
+              </div>
+            </section>
+            <section class="panel form-panel">
+              <div class="form-section-title"><span class="section-number">02</span>
+                <div>
+                  <h3>Order details</h3>
+                  <p>Describe what the customer has ordered.</p>
+                </div>
+              </div>
+              <div class="form-grid">
+                <div class="field"><label for="orderAmount">Order amount (PKR) <span>*</span></label>
+                  <div class="input-prefix"><span>Rs</span><input id="orderAmount" name="orderAmount" type="number"
+                      min="1" step="1" placeholder="12,500" required></div>
+                </div>
+                <div class="field"><label for="orderCategory">Order category</label><select id="orderCategory"
+                    name="orderCategory">
+                    <option>General merchandise</option>
+                    <option>Electronics</option>
+                    <option>Fashion & apparel</option>
+                    <option>Home & living</option>
+                    <option>Beauty & personal care</option>
+                    <option>Other</option>
+                  </select></div>
+                <div class="field field-full"><label for="orderDescription">Order description / items
+                    <span>*</span></label><textarea id="orderDescription" name="orderDescription" rows="4"
+                    placeholder="List items, quantities, sizes, colors, or other notes..." required></textarea></div>
+              </div>
+            </section>
+            <section class="panel form-panel">
+              <div class="form-section-title"><span class="section-number">03</span>
+                <div>
+                  <h3>Payment information</h3>
+                  <p>Select a payment method and record the amount received.</p>
+                </div>
+              </div>
+              <fieldset class="payment-options">
+                <legend>Payment method <span>*</span></legend><label class="payment-option"><input type="radio"
+                    name="paymentMethod" value="COD" checked><span class="payment-option-icon">Rs</span><span><b>Cash on
+                      delivery</b><small>Customer pays on delivery</small></span><i></i></label><label
+                  class="payment-option"><input type="radio" name="paymentMethod" value="Partial Payment"><span
+                    class="payment-option-icon">◐</span><span><b>Partial payment</b><small>Customer paid a
+                      deposit</small></span><i></i></label><label class="payment-option"><input type="radio"
+                    name="paymentMethod" value="Full Payment"><span class="payment-option-icon">✓</span><span><b>Full
+                      payment</b><small>Customer paid in full</small></span><i></i></label>
+              </fieldset>
+              <div class="form-grid payment-extra">
+                <div class="field"><label for="amountReceived">Amount received (PKR)</label>
+                  <div class="input-prefix"><span>Rs</span><input id="amountReceived" name="amountReceived"
+                      type="number" min="0" step="1" value="0"></div><small class="field-hint">For COD, enter 0.</small>
+                </div>
+                <div class="field"><label for="receiptFile">Payment receipt <small>(optional)</small></label><label
+                    class="file-drop" for="receiptFile"><span class="upload-icon">↑</span><b>Choose a receipt
+                      file</b><small>PNG, JPG or PDF · prototype only</small><input id="receiptFile" name="receiptFile"
+                      type="file" accept=".png,.jpg,.jpeg,.pdf"></label><small class="field-hint" id="fileName">No file
+                    selected</small></div>
+              </div>
+            </section>
+            <div class="form-actions"><button class="btn btn-secondary" type="reset">Reset form</button><button
+                class="btn btn-primary" type="submit">Submit order <span>→</span></button></div>
+          </div>
+          <aside class="form-aside">
+            <section class="panel order-summary">
+              <div class="summary-icon">▤</div>
+              <h3>Order summary</h3>
+              <p>Review the key details before submission.</p>
+              <div class="summary-line"><span>Order amount</span><b id="summaryAmount">Rs0</b></div>
+              <div class="summary-line"><span>Amount received</span><b id="summaryReceived">Rs0</b></div>
+              <div class="summary-line"><span>Remaining balance</span><b id="summaryBalance">Rs0</b></div>
+              <div class="summary-total"><span>Payment method</span><b id="summaryMethod">Cash on delivery</b></div>
+              <div class="summary-note"><span>ⓘ</span>
+                <p>This is a front-end prototype. Submitted data is stored only in this browser for demonstration.</p>
+              </div>
+            </section>
+            <section class="panel tips-panel">
+              <h3>Before you submit</h3>
+              <ul>
+                <li>Double-check the customer's phone number.</li>
+                <li>Confirm the full delivery address.</li>
+                <li>For partial/full payments, keep receipt details ready.</li>
+              </ul>
+            </section>
+          </aside>
+        </form>
+
+        <footer class="app-footer"><span>© 2026 OrderFlow · Front-end prototype</span><span>Built for Web Engineering ·
+            BSCS 5A</span></footer>
+      </section>
+    </main>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+</body>
+
+</html>

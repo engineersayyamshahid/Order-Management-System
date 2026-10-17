@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="OrderFlow order management system front-end prototype">
+  <title>Sign in | OrderFlow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body class="login-page">
+  <main class="login-shell">
+    <section class="login-brand">
+      <a class="brand brand-light" href="index.html"><span class="brand-mark">O</span><span>orderflow<span class="brand-dot">.</span></span></a>
+      <div class="login-brand-copy">
+        <span class="eyebrow">ORDER MANAGEMENT, SIMPLIFIED</span>
+        <h1>Every order.<br><em>Under control.</em></h1>
+        <p>A calmer way to manage orders, payments, commissions, and dispatch — all in one workspace.</p>
+        <div class="login-feature"><span class="feature-icon">↗</span><span><b>One clear workflow</b><small>From order submission to dispatch</small></span></div>
+        <div class="login-feature"><span class="feature-icon">◈</span><span><b>Built for your team</b><small>Dedicated Admin and Employee views</small></span></div>
+      </div>
+      <div class="login-brand-footer">A semester project by <b>Sayyam Shahid</b> · BSCS 5A</div>
+    </section>
+    <section class="login-panel">
+      <div class="login-top"><span class="status-dot"></span> Workspace preview <span class="demo-label">DEMO</span></div>
+      <div class="login-form-wrap">
+        <span class="eyebrow">WELCOME BACK</span>
+        <h2>Sign in to your workspace</h2>
+        <p class="muted">Use a demo role to explore the prototype.</p>
+        <form id="loginForm" class="stack-form">
+          <label for="loginEmail">Email address</label>
+          <input id="loginEmail" name="email" type="email" placeholder="you@company.com" value="employee@orderflow.demo" required>
+          <label for="loginPassword">Password</label>
+          <div class="password-field"><input id="loginPassword" name="password" type="password" placeholder="Enter any password" value="demo1234" required><button class="password-toggle" type="button" data-toggle-password="loginPassword" aria-label="Show password">◉</button></div>
+          <label for="loginRole">Continue as</label>
+          <select id="loginRole" name="role"><option value="employee">Employee workspace</option><option value="admin">Administrator workspace</option></select>
+          <button class="btn btn-primary btn-wide" type="submit">Enter workspace <span>→</span></button>
+          <p class="form-note">Demo only: no real account or password is checked.</p>
+        </form>
+        <div class="demo-accounts"><b>Quick demo access</b><div><span>Employee</span><code>employee@orderflow.demo</code><button type="button" data-demo-role="employee">Use</button></div><div><span>Admin</span><code>admin@orderflow.demo</code><button type="button" data-demo-role="admin">Use</button></div></div>
+      </div>
+      <footer class="login-footer">© 2026 OrderFlow Prototype <span>Designed for Web Engineering</span></footer>
+    </section>
+  </main>
+</body>
+</html>
