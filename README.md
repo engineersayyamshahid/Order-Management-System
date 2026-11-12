@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ⚡ OrderFlow — Smart Order Management System
 
 <div align="center">
@@ -421,3 +422,32 @@ All displayed records and login credentials are intended for prototype use. Plan
 [GitHub Repository](https://github.com/engineersayyamshahid/Order-Management-System) · [SYFA Digital](https://syfadigital.com)
 
 </div>
+=======
+# OrderFlow — Animated Order Management System
+
+A responsive, animated vanilla HTML/CSS/JavaScript demo inspired by the supplied OrderFlow prototype.
+
+## Run
+1. Extract the ZIP.
+2. Open `index.html` in a browser. For best results, use VS Code Live Server.
+3. Sign in with either role. Demo password: any non-empty value.
+
+## Demo accounts
+- Employee: `employee@orderflow.demo`
+- Admin: `admin@orderflow.demo`
+
+## Features
+- Animated illustrated login scene (traveller with suitcase, second character opening a glowing case)
+- Employee and admin workspaces
+- Create, view, search and filter orders
+- Approve/reject orders
+- Demo commission calculation (5% of approved order values)
+- Dispatch status and tracking-code generation
+- CSV export and print
+- Persistent browser demo data using `localStorage`
+- Dark/light theme toggle (preference saved in browser)
+- Responsive navigation, toast notifications and reduced-motion support
+
+## Important
+This is a front-end prototype. It has no real authentication, server, database, payment verification, file upload storage, or access control. Do not use real customer information. For production, add a secure backend, database, server-side authorization, validation, audit logs and payment-provider integration.
+>>>>>>> 6fdde21 (Upgrade OrderFlow with Midnight Teal UI and animations)
